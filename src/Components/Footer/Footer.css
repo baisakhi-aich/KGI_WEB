@@ -1,0 +1,89 @@
+/* General footer styles */
+.footer {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f8f9fa; /* Light background */
+  border-top: 2px solid #ddd; /* Subtle border for separation */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  font-family: "Arial", sans-serif;
+}
+
+/* Left section of the footer */
+.footer-left {
+  font-size: 15px;
+  color: #555; /* Light gray text */
+  flex: 1; /* Responsive sizing */
+  margin-bottom: 10px; /* Space for mobile layout */
+  text-align: start;
+}
+
+/* Right section of the footer */
+.footer-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+  flex: 1;
+  margin-bottom: 10px; /* Space for mobile layout */
+}
+
+/* Icons container */
+.icons {
+  display: flex;
+  justify-content: start;
+  gap: 35px; /* Even spacing between each icon */
+}
+
+/* Social media icons */
+.icons a {
+  font-size: 24px; /* Icon size */
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease; /* Animation effect */
+}
+
+.icons a:hover {
+  transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* Original brand colors */
+.icons .facebook {
+  color: #3b5998; /* Facebook blue */
+}
+
+.icons .twitter {
+  color: #1da1f2; /* Twitter blue */
+}
+
+.icons .linkedin {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.icons .youtube {
+  color: #ff0000; /* YouTube red */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align text */
+    text-align: center; /* Center text */
+  }
+
+  .footer-left {
+    margin-bottom: 15px; /* Space below for smaller screens */
+  }
+
+  .footer-right {
+    justify-content: center; /* Center icons for mobile view */
+  }
+
+  .icons {
+    gap: 20px; /* Slightly reduce gap for smaller screens */
+  }
+}
+
+
+  
