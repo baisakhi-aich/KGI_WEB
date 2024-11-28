@@ -1,0 +1,96 @@
+.allgrps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; Background color red for the entire container */
+    padding: 10px; /* Reduced padding for better alignment */
+    border-radius: 8px;
+    max-width: 600px; /* Limit width for better responsiveness */
+    margin: auto;
+  }
+  
+  .allgrps img {
+    width: 200px; /* Increased width for better visibility */
+    margin-bottom: 2px; /* Reduced gap between image and group names */
+  }
+  
+  .groupsname {
+    display: flex;
+    flex-direction: column; /* Arrange items one by one vertically */
+    gap: 10px; /* Less space between the group names */
+    width: 100%; /* Full width for group names */
+  }
+  
+  .groupsname a h6 {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(105, 7, 58); /* Initial color for first link */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  /* Alternating colors for links */
+  .groupsname a:nth-child(1) h6 {
+    background-color: rgb(192, 103, 20); /* First link blue */
+  }
+  
+  .groupsname a:nth-child(2) h6 {
+    background-color: rgb(11, 8, 43); /* Second link red */
+  }
+  
+  .groupsname a:nth-child(3) h6 {
+    background-color: rgb(18, 137, 18); /* Third link green */
+  }
+  
+  .groupsname a:nth-child(4) h6 {
+    background-color: rgb(133, 19, 168); /* Repeating: Fourth link blue */
+  }
+  
+  .groupsname a:nth-child(5) h6 {
+    background-color: rgba(255, 0, 0, 0.88); /* Fifth link red */
+  }
+  
+  .groupsname a h6:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    filter: brightness(1.2); /* Brightens color on hover */
+  }
+  
+  span {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(13, 111, 31);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: rgb(230, 235, 235); /* Background color red for location */
+    padding: 10px 20px;
+    border-radius: 50px;
+  }
+  
+  span i {
+    color: rgb(25, 23, 22); /* Icon color */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .allgrps {
+      padding: 10px;
+    }
+  
+    .groupsname a h6 {
+      font-size: 14px; /* Slightly smaller text for mobile */
+      padding: 8px 15px;
+      text-decoration:none;
+    }
+  
+    span {
+      font-size: 14px; /* Smaller location text */
+      padding: 8px 15px;
+    }
+  }
+  

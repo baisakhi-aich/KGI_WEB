@@ -1,0 +1,81 @@
+/* Teams.css */
+.quote-container {
+  max-width: 1200px; /* Set a max width for the container */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add some padding */
+}
+
+h2 {
+  text-align: center; /* Center the heading */
+  margin-bottom: 40px; /* Space below the heading */
+}
+
+.cantainer1,
+.container2 {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 20px; /* Space between containers */
+}
+
+.quote-image-wrapper {
+  flex: 1; /* Allow the image wrapper to take up available space */
+  overflow: hidden; /* Prevent overflow during scaling */
+}
+
+.quote-image {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  animation: fadeIn 0.5s ease forwards; /* Fade-in effect on load */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.quote-image:hover {
+  transform: scale(1.05); /* Scale up the image on hover */
+}
+
+.quote-text {
+  flex: 2; /* Allow more space for text */
+  padding: 20px; /* Add padding around text */
+}
+
+blockquote {
+  font-style: italic; /* Style for blockquote */
+  margin: 0; /* Remove default margin */
+}
+
+p {
+  text-align: right; /* Align author name to the right */
+  font-weight: bold; /* Make author name bold */
+}
+
+/* Fade-in keyframes for images */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(20px); /* Optional: slide in from below */
+  }
+  to {
+    opacity: 1; /* End fully opaque */
+    transform: translateY(0); /* Return to original position */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cantainer1,
+  .container2 {
+    flex-direction: column; /* Stack elements on smaller screens */
+    align-items: flex-start; /* Align items to start */
+  }
+
+  .quote-image-wrapper, 
+  .quote-text {
+    width: 100%; /* Full width for both elements in mobile view */
+    margin-bottom: 20px; /* Space between stacked elements */
+  }
+
+  h2 {
+    font-size: 1.5em; /* Adjust heading size for smaller screens */
+    margin-bottom: 20px;
+  }
+}
