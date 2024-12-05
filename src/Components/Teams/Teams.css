@@ -5,16 +5,17 @@
   padding: 20px; /* Add some padding */
 }
 
-h2 {
+.quote-container h2 {
   text-align: center; /* Center the heading */
-  margin-bottom: 40px; /* Space below the heading */
+  margin-bottom: 30px; /* Space below the heading */
+color:rgb(0, 128, 0) ;
 }
 
 .cantainer1,
 .container2 {
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center items vertically */
-  margin-bottom: 20px; /* Space between containers */
+  margin-bottom: 10px; /* Space between containers */
 }
 
 .quote-image-wrapper {

@@ -28,7 +28,7 @@ const Popup = () => {
               className="popup-logo"
             />
             
-            <p>Welcome to our website!</p>
+  
           </div>
         </div>
       )}

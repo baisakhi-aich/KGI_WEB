@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo2.png";
 import "./Navbar.css";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,18 +12,86 @@ const Navbar = () => {
 
   return (
     <div className="main-container">
+      {/* Logo */}
       <div className="leftmenu">
-        <img src={logo} alt="kgi logo" />
+        <img src={logo} alt="KGI Logo" />
       </div>
-      <div className={`rightmenu ${menuOpen ? "active" : ""}`}>
-        <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-        <a href="#groups" onClick={() => setMenuOpen(false)}>Our institutes</a>
-        <a href="#team" onClick={() => setMenuOpen(false)}>Our Team</a>
-        <a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a>
-        <a href="#blog" onClick={() => setMenuOpen(false)}>Blog</a>
-        <a href="#contact" onClick={() => setMenuOpen(false)}>Contact Us</a>
+
+      {/* Menu Links */}
+      <div className={`rightmenu ${menuOpen ? "active" : "inactive"}`}>
+        <Link
+          to="home"
+          className="nav-link"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          onClick={() => setMenuOpen(false)}
+        >
+          Home
+        </Link>
+        <Link
+          to="groups"
+          className="nav-link"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          onClick={() => setMenuOpen(false)}
+        >
+          Our Team
+        </Link>
+        <Link
+          to="team"
+          className="nav-link"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          onClick={() => setMenuOpen(false)}
+        >
+          Our Institutes
+        </Link>
+        <Link
+          to="gallery"
+          className="nav-link"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          onClick={() => setMenuOpen(false)}
+        >
+          Gallery
+        </Link>
+        <Link
+          to="blog"
+          className="nav-link"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          onClick={() => setMenuOpen(false)}
+        >
+          Blog
+        </Link>
+        <Link
+          to="contact"
+          className="nav-link contact-button"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          onClick={() => setMenuOpen(false)}
+        >
+          Contact Us
+        </Link>
       </div>
-      <div className="hamburger" onClick={toggleMenu}>
+
+      {/* Hamburger Menu */}
+      <div
+        className={`hamburger ${menuOpen ? "active" : ""}`}
+        onClick={toggleMenu}
+      >
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>

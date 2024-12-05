@@ -37,7 +37,7 @@
 }
 
 .rightmenu a:hover {
-  color: hwb(121 7% 28%); /* Highlight color */
+  color: green; /* Highlight color */
   transform: scale(1.1); /* Zoom effect */
   font-size: 18px; /* Size increase */
 }
@@ -51,7 +51,7 @@
   width: 25px;
   cursor: pointer;
   position: absolute;
-  right: 20px; /* Align to the right */
+  right: 20px;
 }
 
 .hamburger .bar {
@@ -70,6 +70,7 @@
   }
 
   .rightmenu {
+    display: block;
     position: absolute;
     top: 60px;
     right: 0;
@@ -86,6 +87,10 @@
 
   .rightmenu.active {
     transform: translateX(0); /* Slide in when active */
+  }
+
+  .rightmenu.inactive {
+    display: none;
   }
 
   .hamburger {
