@@ -6,7 +6,7 @@ const Teams = () => {
   return (
     
         <div className="quote-container" id='groups'>
-              <h2 >Our Teams</h2>
+              <h2 >Our Team</h2>
           <div className='cantainer1'>
           <div className="quote-image-wrapper">
             <img

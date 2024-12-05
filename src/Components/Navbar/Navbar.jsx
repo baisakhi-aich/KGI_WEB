@@ -50,7 +50,7 @@ const Navbar = () => {
           duration={500}
           onClick={() => setMenuOpen(false)}
         >
-          Our Institutes
+          Our Institutions
         </Link>
         <Link
           to="gallery"
