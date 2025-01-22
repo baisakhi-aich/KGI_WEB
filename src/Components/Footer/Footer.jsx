@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css"; // Ensure you create this CSS file
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -52,3 +52,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

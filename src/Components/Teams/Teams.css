@@ -1,82 +1,79 @@
-/* Teams.css */
 .quote-container {
-  max-width: 1200px; /* Set a max width for the container */
-  margin: 0 auto; /* Center the container */
-  padding: 20px; /* Add some padding */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .quote-container h2 {
-  text-align: center; /* Center the heading */
-  margin-bottom: 30px; /* Space below the heading */
-color:rgb(0, 128, 0) ;
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(0, 128, 0);
 }
 
-.cantainer1,
-.container2 {
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Center items vertically */
-  margin-bottom: 10px; /* Space between containers */
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .quote-image-wrapper {
-  flex: 1; /* Allow the image wrapper to take up available space */
-  overflow: hidden; /* Prevent overflow during scaling */
+  flex: 1;
+  overflow: hidden;
 }
 
 .quote-image {
-  width: 100%; /* Make image responsive */
-  height: auto; /* Maintain aspect ratio */
-  animation: fadeIn 0.5s ease forwards; /* Fade-in effect on load */
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  width: 100%;
+  height: auto;
+  animation: fadeIn 0.5s ease forwards;
+  transition: transform 0.3s ease;
 }
 
 .quote-image:hover {
-  transform: scale(1.05); /* Scale up the image on hover */
+  transform: scale(1.05);
 }
 
 .quote-text {
-  flex: 2; /* Allow more space for text */
-  padding: 20px; /* Add padding around text */
+  flex: 2;
+  padding: 20px;
 }
 
 blockquote {
-  font-style: italic; /* Style for blockquote */
-  margin: 0; /* Remove default margin */
+  font-style: italic;
+  margin: 0;
 }
 
 p {
-  text-align: right; /* Align author name to the right */
-  font-weight: bold; /* Make author name bold */
+  text-align: right;
+  font-weight: bold;
 }
 
 /* Fade-in keyframes for images */
 @keyframes fadeIn {
   from {
-    opacity: 0; /* Start fully transparent */
-    transform: translateY(20px); /* Optional: slide in from below */
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    opacity: 1; /* End fully opaque */
-    transform: translateY(0); /* Return to original position */
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .cantainer1,
-  .container2 {
-    flex-direction: column; /* Stack elements on smaller screens */
-    align-items: flex-start; /* Align items to start */
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .quote-image-wrapper, 
+  .quote-image-wrapper,
   .quote-text {
-    width: 100%; /* Full width for both elements in mobile view */
-    margin-bottom: 20px; /* Space between stacked elements */
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   h2 {
-    font-size: 1.5em; /* Adjust heading size for smaller screens */
+    font-size: 1.5em;
     margin-bottom: 20px;
   }
 }

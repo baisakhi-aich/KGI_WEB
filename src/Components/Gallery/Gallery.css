@@ -1,34 +1,92 @@
-.main-gallery {
-  padding: 50px;
-  /* background-color: #f9f9f9; */
+/* Gallery container styles */
+.gallery-container {
   text-align: center;
+  padding: 20px;
+  /* Ensure there's sufficient padding for touch gestures on mobile */
 }
 
-.main-gallery h1 {
-  font-size: 36px;
+/* Event name (h1) styling */
+.event-title {
+  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: hsla(127, 87%, 40%, 0.89);
+  color: #11e111;
+  /* Adjust font size for mobile */
+  font-size: 2rem;
 }
 
-.gallery-div {
+/* Gallery grid setup - Mobile-first approach */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column by default for mobile */
+  gap: 16px;
+  max-width: 100%; /* Full width for mobile */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Gallery item and image styles */
+.gallery-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(89, 71, 71, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Ensure the item uses full width */
 }
 
-.gallery-div img {
-  width: 50%;
-  max-width: 500px;
-  height: auto;
-  border: 5px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+/* Hover effect for gallery item */
+.gallery-item:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 12px rgba(89, 71, 71, 0.2); /* Stronger shadow */
 }
 
-.gallery-div img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+/* Gallery image styles */
+.gallery-image {
+  width: 100%; /* Full width of the container */
+  height: 250px; /* Increased height for better visual effect on mobile */
+  object-fit: cover; /* Ensures images cover the space without distortion */
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(89, 71, 71, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on images */
+.gallery-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Tablet screen (max-width: 900px) */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+
+  .event-title {
+    font-size: 2.2rem; /* Slightly larger title for tablets */
+  }
+
+  .gallery-image {
+    height: 220px; /* Slightly reduce image height on tablets */
+  }
+}
+
+/* Desktop screen (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium-sized screens */
+  }
+}
+
+/* Large desktop screen (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+  }
+
+  .event-title {
+    font-size: 2.5rem; /* Larger font on desktop */
+  }
 }

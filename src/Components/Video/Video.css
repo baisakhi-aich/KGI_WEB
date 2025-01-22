@@ -1,72 +1,39 @@
-.vdopage {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
+/* Ensuring all images have the same height and width */
+.custom-height {
+  height: 600px; /* Set fixed height for all images */
+  width: 100%;    /* Make the width 100% of the container */
+  object-fit: contain; /* Ensures images fit within the container without distortion */
+  background-color: #000; /* Optional: Add a background color if the image doesn't fully cover the area */
+}
+
+/* For tablet and smaller devices */
+@media (max-width: 768px) {
+  .custom-height {
+    height: 450px; /* Reduce height for tablets */
   }
-  
-  .vdo-player {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video covers the container without distortion */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Keeps the video behind the content */
+}
+
+/* For mobile screens */
+@media (max-width: 576px) {
+  .custom-height {
+    height: 200px; /* Further reduces height for mobile */
   }
-  
-  .content {
-    position: absolute; /* Centering content */
-    z-index: 2; /* Brings the content above the video */
-    /* color: white; Base text color */
-    text-align: center;
-    padding: 20px;
-    /* background: rgba(0, 0, 0, 0.5); Semi-transparent background for readability */
-    margin: auto;
-    top: 50%;
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center vertically and horizontally */
-    width: 80%;
-    border-radius: 8px;
-  }
-  
-  .content h1 {
-    color: black; /* Change h1 color to black */
-    font-size: calc(32px + (24 - 32) * ((100vw - 320px) / (1600 - 320))); /* Responsive font size */
-  }
-  
-  .content h6 {
-    font-size: calc(24px + (16 - 24) * ((100vw - 320px) / (1600 - 320))); /* Responsive font size */
-  }
-  
-  .content p {
-    font-size: calc(18px + (12 - 18) * ((100vw - 320px) / (1600 - 320))); /* Larger responsive font size */
-    line-height: 1.8; /* Increased line height for better readability */
-    color: hwb(120 13% 45%);
-  }
-  
-  /* Optional media queries for additional responsiveness */
-  @media (max-width: 768px) {
-      .content h1 {
-          font-size: 28px; /* Smaller size for tablets */
-      }
-      .content h6 {
-          font-size: 20px; /* Smaller size for tablets */
-      }
-      .content p {
-          font-size: 16px; /* Smaller size for tablets */
-      }
-  }
-  
-  @media (max-width: 480px) {
-      .content h1 {
-          font-size: 24px; /* Smaller size for mobile phones */
-      }
-      .content h6 {
-          font-size: 18px; /* Smaller size for mobile phones */
-      }
-      .content p {
-          font-size: 14px; /* Smaller size for mobile phones */
-      }
-  }
-    
+}
+
+/* Optional: Style the carousel controls (for better visibility on mobile) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent; /* Slight background for controls */
+}
+
+/* Optional: Style carousel for smaller screens */
+.carousel-inner {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%; /* Ensure the image fills the height without distortion */
+  object-fit: contain; /* Maintain aspect ratio, without cropping */
+}

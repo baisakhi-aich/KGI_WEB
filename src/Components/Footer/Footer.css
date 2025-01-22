@@ -1,89 +1,87 @@
 /* General footer styles */
 .footer {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping for small screens */
+  flex-wrap: nowrap; /* Prevent unnecessary wrapping */
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background-color: #f8f9fa; /* Light background */
-  border-top: 2px solid #ddd; /* Subtle border for separation */
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  background-color: #f8f9fa; /* Light gray background */
+  border-top: 2px solid #ddd;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   font-family: "Arial", sans-serif;
+  min-height: 60px; /* Fixed height for consistency */
 }
 
-/* Left section of the footer */
+/* Left section */
 .footer-left {
   font-size: 15px;
-  color: #555; /* Light gray text */
-  flex: 1; /* Responsive sizing */
-  margin-bottom: 10px; /* Space for mobile layout */
+  color: #555;
+  margin: 0; /* Remove margin */
+  flex: 0 0 50%; /* Take 50% of space */
   text-align: start;
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
-/* Right section of the footer */
+/* Right section */
 .footer-right {
   display: flex;
   justify-content: flex-end;
-  align-items: start;
-  flex: 1;
-  margin-bottom: 10px; /* Space for mobile layout */
+  align-items: center;
+  flex: 0 0 50%; /* Take 50% of space */
+  text-align: end;
 }
 
 /* Icons container */
 .icons {
   display: flex;
-  justify-content: start;
-  gap: 35px; /* Even spacing between each icon */
+  gap: 25px; /* Even spacing between icons */
 }
 
-/* Social media icons */
 .icons a {
-  font-size: 24px; /* Icon size */
+  font-size: 24px;
   text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease; /* Animation effect */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .icons a:hover {
-  transform: scale(1.2); /* Zoom effect on hover */
+  transform: scale(1.2);
 }
 
-/* Original brand colors */
-.icons .facebook {
-  color: #3b5998; /* Facebook blue */
-}
+/* Social media brand colors */
+.facebook { color: #3b5998; }
+.twitter { color: #1da1f2; }
+.linkedin { color: #0077b5; }
+.youtube { color: #ff0000; }
 
-.icons .twitter {
-  color: #1da1f2; /* Twitter blue */
-}
-
-.icons .linkedin {
-  color: #0077b5; /* LinkedIn blue */
-}
-
-.icons .youtube {
-  color: #ff0000; /* YouTube red */
-}
-
-/* Responsive Design */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .footer {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center align text */
-    text-align: center; /* Center text */
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .footer-left,
+  .footer-right {
+    flex: 0 0 100%; /* Make both sections full width */
+    margin-bottom: 10px;
   }
 
   .footer-left {
-    margin-bottom: 15px; /* Space below for smaller screens */
-  }
-
-  .footer-right {
-    justify-content: center; /* Center icons for mobile view */
+    text-align: center;
+    white-space: normal; /* Allow text wrapping */
   }
 
   .icons {
-    gap: 20px; /* Slightly reduce gap for smaller screens */
+    justify-content: center;
+    gap: 20px; /* Adjust spacing */
   }
 }
 
+@media (max-width: 480px) {
+  .icons a {
+    font-size: 20px; /* Slightly smaller icons for very small screens */
+  }
+}
 
   

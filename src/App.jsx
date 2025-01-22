@@ -6,18 +6,14 @@ import Teams from './Components/Teams/Teams'
 import Ourgroup from './Components/Ourgroup/Ourgroup'
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
- import Gallery from './Components/Gallery/Gallery'
-// import Demo from './Components/Demo/Demo'
 const App = () => {
   return (
     <div>
        <Popup/>  
    <Navbar/> 
   <Video/> 
-{/* <Demo/> */}
- <Teams/>
+  <Teams/> 
  <Ourgroup/> 
-  <Gallery/> 
 <Contact/>
 <Footer/> 
     </div>

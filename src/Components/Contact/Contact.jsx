@@ -9,11 +9,6 @@ const Contact = () => {
   //   query: '',
   // });
 
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData({ ...formData, [name]: value });
-  // };
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [number, setNumber] = useState('');
@@ -128,4 +123,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contact; 
