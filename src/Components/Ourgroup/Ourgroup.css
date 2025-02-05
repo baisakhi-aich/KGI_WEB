@@ -55,7 +55,8 @@
 /* Alternating background colors for links */
 .groupsname a:nth-child(1) h6 { background-color: rgb(192, 103, 20); }
 .groupsname a:nth-child(2) h6 { background-color: rgb(11, 8, 43); }
-.groupsname a:nth-child(3) h6 { background-color: rgb(18, 137, 18); }
+.groupsname a:nth-child(3) h6 { background-color: rgb(230, 230, 16); }
+.groupsname a:nth-child(3) h6 { background-color: #13af4d; }
 .groupsname a:nth-child(4) h6 { background-color: rgb(133, 19, 168); }
 .groupsname a:nth-child(5) h6 { background-color: rgba(255, 0, 0, 0.88); }
 

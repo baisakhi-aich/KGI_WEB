@@ -11,6 +11,7 @@ const Ourgroup = () => {
         <a href='https://knpjajpur.org/'><h6>Kalinga Nagar Polytechnic</h6></a>
         <a href='https://g.co/kgs/5L9dyx2'><h6>Kalinga Higher Secondary School</h6></a>
         <a href='https://sxisjajpur.org/'><h6>St Xavier International School</h6></a>
+        <a href='https://kacs.org.in/'><h6>Kalinga Academy of Civil Service</h6></a>
         <a><h6>Kalinga Academy</h6></a>
         <a><h6>Kamaldevi Institute of Medical Sciences</h6></a>
       </div>

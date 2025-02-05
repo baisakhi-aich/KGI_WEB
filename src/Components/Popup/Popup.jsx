@@ -13,12 +13,11 @@ const Popup = () => {
     const timer = setTimeout(() => {
       setIsVisible(false);
     }, 5000);
-
+    // 
     // Clean up the timer when the component unmounts or updates
     return () => clearTimeout(timer);
-  }, []); // Empty dependency array ensures it runs only once when the component mounts
-
-  return (
+  }, []); // Empty dependency array ensures it runs only once when the component mounts..
+    return (
     <>
       {isVisible && (
         <div className="popup-overlay">
@@ -34,5 +33,4 @@ const Popup = () => {
     </>
   );
 };
-
 export default Popup;

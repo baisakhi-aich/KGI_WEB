@@ -6,6 +6,7 @@ import Teams from './Components/Teams/Teams'
 import Ourgroup from './Components/Ourgroup/Ourgroup'
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
+import Gallery from "./Components/Gallery/Gallery"
 const App = () => {
   return (
     <div>
@@ -13,6 +14,7 @@ const App = () => {
    <Navbar/> 
   <Video/> 
   <Teams/> 
+<Gallery/>
  <Ourgroup/> 
 <Contact/>
 <Footer/> 

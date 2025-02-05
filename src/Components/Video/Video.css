@@ -3,7 +3,7 @@
   height: 600px; /* Set fixed height for all images */
   width: 100%;    /* Make the width 100% of the container */
   object-fit: contain; /* Ensures images fit within the container without distortion */
-  background-color: #000; /* Optional: Add a background color if the image doesn't fully cover the area */
+  background-color: #0a0909; /* Optional: Add a background color if the image doesn't fully cover the area */
 }
 
 /* For tablet and smaller devices */
@@ -16,10 +16,8 @@
 /* For mobile screens */
 @media (max-width: 576px) {
   .custom-height {
-    height: 200px; /* Further reduces height for mobile */
-  }
-}
-
+        height: 200px; /* Further reduces height for mobile */
+      }}
 /* Optional: Style the carousel controls (for better visibility on mobile) */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
