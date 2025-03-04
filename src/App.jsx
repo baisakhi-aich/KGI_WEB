@@ -1,5 +1,5 @@
 import React from 'react'
-import Popup from './Components/Popup/Popup'
+import Popup from './Components/Popup/Popup'              
 import Navbar from './Components/Navbar/Navbar'
 import Video from './Components/Video/Video'
 import Teams from './Components/Teams/Teams'
@@ -10,16 +10,17 @@ import Gallery from "./Components/Gallery/Gallery"
 const App = () => {
   return (
     <div>
-       <Popup/>  
-   <Navbar/> 
-  <Video/> 
-  <Teams/> 
-<Gallery/>
- <Ourgroup/> 
-<Contact/>
-<Footer/> 
-    </div>
+   <Popup/>     
+   <Navbar/>    
+   <Video/>     
+   <Teams/> 
+   <Gallery/>  
+   <Ourgroup/> 
+   <Contact/>  
+   <Footer/>   
+    </div>      
   )
 }
 
-export default App
+export default App   
+

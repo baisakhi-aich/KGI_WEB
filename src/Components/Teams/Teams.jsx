@@ -34,7 +34,7 @@ const Teams = () => {
             Together,we can make a lasting impact, fostering a brighter and more equitable future. 
             Warm regards, Chairman, Kalinga Group of Institutions
             </blockquote>
-          <p>— Er. Alexzandar Das, Director (KGI)</p>
+          <p>— Er. Alexxzandar Dass, Chairman (KGI)</p>
         </div>
       </div>
 

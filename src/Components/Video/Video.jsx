@@ -1,38 +1,28 @@
-import React from 'react';
-import event1 from "../../assets/1.jpeg.jpg";
-import event2 from "../../assets/2.jpeg.jpg";
-import event3 from "../../assets/3.jpeg.jpg";
-import event4 from "../../assets/4.jpeg.jpg";
-import event5 from "../../assets/5.jpeg.jpg";
-import event6 from "../../assets/6.jpeg.jpg";
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css"; // Ensure Bootstrap CSS is imported
+import "./Video.css";
+
+import event0 from "../../assets/new10.jpg";
+import event1 from "../../assets/new1.jpg";
+import event2 from "../../assets/new2.jpg";
+import event3 from "../../assets/new3.jpg";
+import event4 from "../../assets/new4.jpg";
+import event5 from "../../assets/new5.jpg";
+import event6 from "../../assets/new9.jpg";
 import event7 from "../../assets/7.jpeg.jpg";
-import './Video.css';  // Import the CSS file for styling
+import event8 from "../../assets/new5.jpg";
 
 const Video = () => {
+  const images = [event1, event0, event2, event3, event4, event5, event6, event7, event8];
+
   return (
     <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
       <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img src={event1} className="d-block w-100 custom-height" alt="Event 1" />
-        </div>
-        <div className="carousel-item">
-          <img src={event2} className="d-block w-100 custom-height" alt="Event 2" />
-        </div>
-        <div className="carousel-item">
-          <img src={event3} className="d-block w-100 custom-height" alt="Event 3" />
-        </div>
-        <div className="carousel-item">
-          <img src={event4} className="d-block w-100 custom-height" alt="Event 4" />
-        </div>
-        <div className="carousel-item">
-          <img src={event5} className="d-block w-100 custom-height" alt="Event 5" />
-        </div>
-        <div className="carousel-item">
-          <img src={event6} className="d-block w-100 custom-height" alt="Event 6" />
-        </div>
-        <div className="carousel-item">
-          <img src={event7} className="d-block w-100 custom-height" alt="Event 7" />
-        </div>
+        {images.map((img, index) => (
+          <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+            <img src={img} className="d-block w-100 custom-height" alt={`Event ${index + 1}`} />
+          </div>
+        ))}
       </div>
 
       {/* Controls */}
@@ -49,4 +39,5 @@ const Video = () => {
 };
 
 export default Video;
+
 
